@@ -6,10 +6,7 @@ public interface UserService {
 
     UserDto signUp(UserDto user);
 
-    AccessToken logIn(String loginName, String password);
+    String logIn(String loginName, String password);
 
     void logOut(AccessToken accessToken);
-
-
-
 }
