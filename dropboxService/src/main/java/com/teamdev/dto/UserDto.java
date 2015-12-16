@@ -1,19 +1,17 @@
 package com.teamdev.dto;
 
-import com.teamdev.service.AccessToken;
-
 public class UserDto {
 
     private String name;
-    private String mail;
-    private AccessToken accessToken;
+    private String email;
+    private String password;
 
-    public UserDto() {
-    }
+    public UserDto() {}
 
-    public UserDto(String name, String mail) {
+    public UserDto(String name, String email, String password) {
         this.name = name;
-        this.mail = mail;
+        this.email = email;
+        this.password = password;
     }
 
     public String getName() {
@@ -24,19 +22,12 @@ public class UserDto {
         this.name = name;
     }
 
-    public String getMail() {
-        return mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public AccessToken getAccessToken() {
-        return accessToken;
-    }
-
-    public void setAccessToken(AccessToken accessToken) {
-        this.accessToken = accessToken;
-    }
 }

@@ -7,15 +7,14 @@ public interface FileService {
 
     FileDto load(String accessToken, FileDto fileDto);
 
-    FileDto get(String accessToken, String fileName);
+    FileDto get(String accessToken, FileDto fileDto);
 
-    void update(String accessToken, String fileName);
+    void update(String accessToken, FileDto currentFileDto, FileDto updatedFileDto);
 
-    void delete(String accessToken, String fileName);
+    void delete(String accessToken, FileDto fileDto);
 
-//    need to correct params
-    void move(String accessToken, String fileName, String destinationFolder);
+    void move(String accessToken, FileDto fileDto, FolderDto destinationFolder);
 
-    void copy(String accessToken, String fileName, String newFileName);
+    void copy(String accessToken, FileDto fileDto, FileDto newFileName);
 
 }

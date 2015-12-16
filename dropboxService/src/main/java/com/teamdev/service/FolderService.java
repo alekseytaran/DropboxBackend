@@ -7,17 +7,17 @@ import java.util.Set;
 
 public interface FolderService {
 
-    FolderDto create(String accessToken, String folderName);
+    FolderDto create(String accessToken, FolderDto folderDto);
 
-    FolderDto get(String accessToken, String folderName);
+    FolderDto get(String accessToken, FolderDto folderDto);
 
-    void delete(String accessToken, String folderName);
+    void delete(String accessToken, FolderDto folderDto);
 
-    void move(String accessToken, String folderName, String destinationFolder);
+    void move(String accessToken, FolderDto folderDto, String destinationFolder);
 
-    void copy(String accessToken, String folderName, String newFolderName);
+    void copy(String accessToken, FolderDto folderDto, String newFolderName);
 
-    Set<FileDto> getFilesFromFolder(String accessToken, String folderName);
+    Set<FileDto> getFilesFromFolder(String accessToken, FolderDto folderDto);
 
-    Set<FolderDto> getFoldersFromFolder(String accessToken, String folderName);
+    Set<FolderDto> getFoldersFromFolder(String accessToken, FolderDto folderName);
 }
