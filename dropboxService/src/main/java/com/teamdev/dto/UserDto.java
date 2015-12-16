@@ -39,31 +39,4 @@ public class UserDto {
     public void setAccessToken(AccessToken accessToken) {
         this.accessToken = accessToken;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UserDto userDto = (UserDto) o;
-
-        if (!name.equals(userDto.name)) return false;
-        return mail.equals(userDto.mail);
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + mail.hashCode();
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "UserDto{" +
-                "name='" + name + '\'' +
-                ", mail='" + mail + '\'' +
-                '}';
-    }
 }
